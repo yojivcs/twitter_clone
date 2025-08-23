@@ -74,30 +74,23 @@ A full-featured Twitter (X) clone built with the MERN stack (MongoDB, Express, R
 
 ## 📱 Screenshots
 
-> **Note:** Screenshots will be added here. Please add your screenshots to the `screenshots/` folder and update the paths below.
-
-### 🥇 **Priority 1 - Must Post First** (Essential for GitHub)
 - [Login Page](screenshots/login.png) - User authentication interface
 - [Main Home Dashboard](screenshots/home-dashboard.png) - Primary timeline view (Main showcase image)
 - [User Profile](screenshots/user-profile.png) - Individual user profiles
-
-### 🥈 **Priority 2 - Post Next** (Important features)
 - [Explore Page](screenshots/explore.png) - Trending topics and discover content
 - [Direct Messages](screenshots/messages.png) - Chat conversations
 - [Post Creation](screenshots/post-creation.png) - Tweet composition
-
-### 🥉 **Priority 3 - Post Later** (Additional features)
 - [Search Results](screenshots/search.png) - User and post search functionality
 - [Profile Editing](screenshots/profile-edit.png) - Profile customization
-
-### 🎨 **Priority 4 - Theme Showcase** (Optional)
 - [Purple Theme](screenshots/purple-theme.png) - Custom purple theme
+- [Light Theme](screenshots/light-theme.png) - Custom light theme
+- [Green Theme](screenshots/green-theme.png) - Custom green theme
+- [Orange Theme](screenshots/orange-theme.png) - Custom orange theme
+- [Pink Theme](screenshots/pink-theme.png) - Custom pink theme
 - [Image Upload](screenshots/media-upload.png) - Image Attachment (*)
 - [Video Upload](screenshots/media-upload-video.png) - Video Attachment
 - [Followers](screenshots/followers.png) - Social connections
 - [Following](screenshots/following.png) - Social connections
-
-### 📱 **Priority 5 - Responsive Design** (Optional)
 - [Tablet View](screenshots/tablet-view.png) - Medium screen adaptation
 - [Mobile View](screenshots/mobile-view.png) - Mobile-optimized interface
 
