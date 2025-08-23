@@ -1,0 +1,167 @@
+Flavor Haven Documentation
+Table Of Contents
+Team Members 2
+Proposal 2
+Project Overview 2
+Objectives 2
+Tools and Technologies 2
+Features 3
+Core Functionality 3
+Administrative 3
+Design Documentation 4
+Wireframes 4
+Database Schema 4
+Setup Instructions 5
+Prerequisites 5
+Steps 5
+Deployment Instructions 6
+Environment Variables Guide 6
+Screenshots 8
+Reservation page 8
+Admin Page 8
+Home Page 8
+Menu Page 8
+Reflections 9
+Resources 92
+Team Members
+● Name 1 - UI/UX design and wireframing
+● Name 2 - Backend development and API Integration
+● Name 3 - Full Stack Development
+● Name 4 - Frontend Development and Route Handling
+Proposal
+Project Overview
+Flavor Haven is a luxurious restaurant website designed to provide a seamless and delightful
+user experience. The platform allows users to browse the menu, book reservations, track
+orders, track reservations, manage their cart, and more. Administrators have the capability to
+manage order statuses (e.g., pending, preparing, ready, delivered, or canceled) and reservation
+statuses (e.g., pending, confirmed, or canceled). With elegant design elements such as
+animations, tooltips, and a sophisticated color scheme of gold, black, and white, the website
+aims to elevate the dining experience digitally.
+Objectives
+● Provide a user-friendly interface for seamless menu browsing and reservation booking.
+● Enable real-time tracking of orders and reservations for users.
+● Offer efficient management tools for administrators to handle orders and reservations.
+● Incorporate a luxurious design aesthetic to reflect the brand's premium quality.
+● Implement advanced features like animations and tooltips for enhanced usability.
+Tools and Technologies
+● Frontend: React, TypeScript, Zustand (state management), Lucide & MynaUI (icons).
+● Backend: Node.js, Express.
+● Database: MongoDB.
+● Deployment: Vercel (frontend), Render (backend).
+● Authentication: Firebase.
+● Validation & Testing: Zod, ThunderClient, Jest.3
+Features
+Core Functionality
+● Menu Browsing: Users can view a detailed menu with descriptions, prices, and images.
+● Reservation Booking: Simplified process for users to book tables at their convenience.
+● Order Tracking: Real-time updates on order statuses, from pending to delivery.
+● Reservation Tracking: Monitor the status of reservations (e.g., pending, confirmed,
+canceled).
+● Cart Management: Users can add, remove, and edit items in their cart.
+Administrative
+● Order Status Management: Admins can update the status of orders (e.g., pending,
+preparing, ready, delivered, canceled).
+● Reservation Status Management: Admins can manage reservation statuses (e.g.,
+pending, confirmed, canceled).4
+Design Documentation
+Wireframes
+Database Schema5
+Setup Instructions
+Prerequisites
+● Software Requirements:
+○ Node.js (v14 or later)
+○ MongoDB (local or cloud instance)
+○ Git
+○ A web browser (latest version of Chrome, Firefox, or Edge recommended)
+● Hardware Requirements:
+○ A computer with at least 8GB of RAM.
+○ Stable internet connection for downloading dependencies and running the
+application.
+Steps
+1. Clone the Repository:
+git clone https://github.com/https-sharif/flavor-haven.git
+cd flavor-haven
+2. Install Dependencies:
+npm install
+3. Set Up Environment Variables:
+● Create a .env file in the root directory.
+● Add the necessary environment variables for MongoDB connection, Firebase
+authentication, and other configurations as specified later in this documentation.
+4. Start the Development Server:
+npm run dev
+● The application will run locally at http://localhost:5173.
+5. Run the Backend Server:
+● Navigate to the backend directory and start the server:
+node server.js6
+6. Access the Application:
+● Open a browser and navigate to http://localhost:5173 to view the application.
+Deployment Instructions
+Frontend Deployment to Vercel:
+1. Log in to your Vercel account.
+2. Import the repository and configure the project settings.
+3. Add the required environment variables in the project dashboard before deploying.
+4. Deploy the frontend application.
+Backend Deployment to Render:
+1. Log in to your Render account.
+2. Create a new web service and connect the backend repository.
+3. Add the required environment variables in the Render dashboard.
+4. Deploy the backend application.
+Final Steps:
+● Ensure both the frontend and backend are properly linked.
+● Test the application in a live environment to confirm functionality.
+Environment Variables Guide
+1. Backend .env File: Create a .env file in the backend directory with the following
+variables:
+● MONGODB_URI: Your MongoDB connection string.
+● PORT: The port for the backend server.
+● CLIENT_ID & CLIENT_SECRET: Google OAuth credentials.
+● DB_NAME: The database name.
+2. How to Get Backend Keys:
+● MongoDB URI: Sign up at MongoDB Atlas and create a cluster. Retrieve the
+connection string from your cluster settings.
+● Google OAuth: Create a project in the Google Cloud Console, enable OAuth,
+and generate credentials.7
+3. Frontend .env File: Create a .env file in the frontend directory with the following
+variables:
+● VITE_FIREBASE_API_KEY: Firebase API key.
+● VITE_FIREBASE_AUTH_DOMAIN: Firebase auth domain.
+● VITE_FIREBASE_PROJECT_ID: Firebase project ID.
+● VITE_FIREBASE_STORAGE_BUCKET: Firebase storage bucket.
+● VITE_FIREBASE_MESSAGING_SENDER_ID: Firebase messaging sender ID.
+● VITE_FIREBASE_APP_ID: Firebase app ID.
+● VITE_FIREBASE_MEASUREMENT_ID: Firebase measurement ID.
+● VITE_BACKEND_URL: The backend URL.
+4. How to Get Frontend Keys:
+● Firebase Credentials: Go to Firebase Console, create a project, and navigate to
+the "Project Settings" to retrieve API credentials.
+● Backend URL: Use the deployed URL of your backend service from Render.
+Ensure these .env files are included in your .gitignore file to prevent sensitive information
+from being exposed.8
+Screenshots
+Reservation page
+Admin Page
+Home Page
+Menu Page9
+Reflections
+Throughout the development of Flavor Haven, our team gained valuable experience in full-stack
+web development and collaboration. Key learnings include:
+● UI/UX Design: Creating a seamless and luxurious design with intuitive user interfaces,
+ensuring an engaging and user-friendly experience.
+● Frontend Development: Building responsive and interactive frontend components using
+React, TypeScript, and Zustand for smooth navigation and real-time features.
+● Backend Development: Implementing server-side logic with Node.js, ensuring reliable
+and scalable API integrations for order and reservation tracking.
+● Database Management: Designing and managing a robust MongoDB schema to store
+and retrieve data efficiently.
+● Deployment: Successfully deploying both frontend and backend on Vercel and Render,
+ensuring a seamless live environment.
+● Teamwork: Collaborating effectively across different roles, ensuring smooth
+communication and the integration of individual contributions into a cohesive project.
+Challenges such as managing real-time data, optimizing performance, and ensuring secure
+user authentication enhanced our technical skills and strengthened our teamwork.
+Resources
+● Github Repository - https://github.com/https-sharif/flavor-haven
+● Live Deployment
+○ Frontend - https://flavor-haven.vercel.app
+○ Backend - https://flavor-haven.onrender.com
+● API Documentation - API Documentation .pd

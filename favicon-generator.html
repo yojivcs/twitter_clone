@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1DA1F2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .icon-container {
+            width: 512px;
+            height: 512px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1DA1F2;
+        }
+        
+        .icon {
+            font-size: 400px;
+            color: white;
+        }
+        
+        .small-icon {
+            width: 32px;
+            height: 32px;
+            font-size: 24px;
+            background: #1DA1F2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        
+        .favicon-sizes {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .size-16 { width: 16px; height: 16px; font-size: 12px; }
+        .size-32 { width: 32px; height: 32px; font-size: 24px; }
+        .size-64 { width: 64px; height: 64px; font-size: 48px; }
+        .size-128 { width: 128px; height: 128px; font-size: 96px; }
+        .size-192 { width: 192px; height: 192px; font-size: 144px; }
+    </style>
+</head>
+<body>
+    <!-- Main 512x512 icon for capture -->
+    <div class="icon-container">
+        <div class="icon">🤖</div>
+    </div>
+    
+    <!-- Different sizes for reference -->
+    <div class="favicon-sizes">
+        <div class="small-icon size-16">🤖</div>
+        <div class="small-icon size-32">🤖</div>
+        <div class="small-icon size-64">🤖</div>
+        <div class="small-icon size-128">🤖</div>
+        <div class="small-icon size-192">🤖</div>
+    </div>
+    
+    <script>
+        // Instructions for the user
+        console.log(`
+        FAVICON GENERATION INSTRUCTIONS:
+        ================================
+        
+        1. Open this HTML file in your browser
+        2. Use browser developer tools to take a screenshot of the main icon (512x512)
+        3. Use an online favicon generator (like favicon.io or realfavicongenerator.net)
+        4. Upload the screenshot to generate all favicon sizes
+        5. Replace the files in client/public/ folder:
+           - favicon.ico
+           - logo192.png  
+           - logo512.png
+        
+        OR use this Unicode robot emoji: 🤖
+        as a temporary favicon until you can generate the proper GiAndroidMask icon
+        `);
+    </script>
+</body>
+</html>
