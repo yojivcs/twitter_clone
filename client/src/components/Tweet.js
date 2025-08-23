@@ -389,11 +389,21 @@ const Tweet = ({ tweet, onReplyClick, isDetailView = false }) => {
   const getMediaType = (mediaPath) => {
     if (!mediaPath || typeof mediaPath !== 'string') return 'unknown';
     
+    console.log('getMediaType input:', mediaPath);
+    
     const videoExtensions = /\.(mp4|webm|ogg|mov|avi|mkv|m4v|3gp|flv|wmv|mpg|mpeg|3g2|f4v|f4p|f4a|f4b)$/i;
     const imageExtensions = /\.(jpg|jpeg|png|gif|bmp|webp|svg|tiff|tif)$/i;
     
-    if (videoExtensions.test(mediaPath)) return 'video';
-    if (imageExtensions.test(mediaPath)) return 'image';
+    if (videoExtensions.test(mediaPath)) {
+      console.log('Detected video type for:', mediaPath);
+      return 'video';
+    }
+    if (imageExtensions.test(mediaPath)) {
+      console.log('Detected image type for:', mediaPath);
+      return 'image';
+    }
+    
+    console.log('Unknown media type for:', mediaPath);
     return 'unknown';
   };
   
@@ -404,19 +414,28 @@ const Tweet = ({ tweet, onReplyClick, isDetailView = false }) => {
     // Convert to string if it's not already
     const path = String(mediaPath);
     
+    console.log('getMediaUrl input:', mediaPath, 'converted to:', path);
+    
     if (path.startsWith('http')) return path;
     if (path.startsWith('//')) return `https:${path}`;
     
-    // Handle relative paths
-    if (path.startsWith('/')) return path;
+    // Handle relative paths - if it already starts with /uploads/, return as is
+    if (path.startsWith('/uploads/')) return path;
     
     // If it's just a filename without path, add the uploads path
-    if (path.includes('.')) {
-      return `/uploads/${path}`;
+    if (path.includes('.') && !path.startsWith('/')) {
+      const result = `/uploads/${path}`;
+      console.log('Adding uploads path:', result);
+      return result;
     }
     
+    // If it starts with / but not /uploads/, return as is
+    if (path.startsWith('/')) return path;
+    
     // Default case - add slash prefix
-    return `/${path}`;
+    const result = `/${path}`;
+    console.log('Adding slash prefix:', result);
+    return result;
   };
   
   // Handle actions
@@ -547,9 +566,14 @@ const Tweet = ({ tweet, onReplyClick, isDetailView = false }) => {
           {(() => {
             if (!mainTweet.media || mainTweet.media.length === 0) return null;
             
+            // Debug logging
+            console.log('Tweet media data:', mainTweet.media);
+            
             // Filter out null/undefined media items
             const validMedia = mainTweet.media.filter(media => media != null);
             if (validMedia.length === 0) return null;
+            
+            console.log('Valid media items:', validMedia);
             
             return (
               <TweetMedia>
@@ -558,20 +582,44 @@ const Tweet = ({ tweet, onReplyClick, isDetailView = false }) => {
                     let mediaUrl = '';
                     let mediaType = 'unknown';
                     
-                    // Simplified media handling
+                    console.log(`Processing media item ${index}:`, media);
+                    
+                    // Enhanced media handling with better debugging
                     if (typeof media === 'string') {
+                      console.log(`Media ${index} is string:`, media);
                       mediaUrl = getMediaUrl(media);
                       mediaType = getMediaType(media);
                     } else if (media && typeof media === 'object') {
-                      // Handle object format
-                      if (media.url) {
+                      console.log(`Media ${index} is object:`, media);
+                      
+                      // Handle corrupted media objects (character-by-character storage)
+                      if (media['0'] === '/' && media['1'] === 'u' && media['2'] === 'p') {
+                        console.log(`Media ${index} is corrupted, reconstructing path`);
+                        // Reconstruct the path from character properties
+                        const pathLength = Object.keys(media).filter(key => !isNaN(key)).length;
+                        let reconstructedPath = '';
+                        for (let i = 0; i < pathLength; i++) {
+                          reconstructedPath += media[i];
+                        }
+                        console.log(`Reconstructed path:`, reconstructedPath);
+                        mediaUrl = getMediaUrl(reconstructedPath);
+                        mediaType = getMediaType(reconstructedPath);
+                      } else if (media.url) {
+                        console.log(`Using media.url:`, media.url);
                         mediaUrl = getMediaUrl(media.url);
                         mediaType = media.type || getMediaType(media.url);
                       } else if (media.filename) {
+                        console.log(`Using media.filename:`, media.filename);
                         mediaUrl = getMediaUrl(media.filename);
                         mediaType = media.type || getMediaType(media.filename);
+                      } else {
+                        console.log(`Media object has no url or filename:`, media);
                       }
+                    } else {
+                      console.log(`Media ${index} is neither string nor object:`, media, 'type:', typeof media);
                     }
+                    
+                    console.log(`Media ${index} - URL: ${mediaUrl}, Type: ${mediaType}`);
                     
                     // Skip if no valid URL
                     if (!mediaUrl) {
@@ -589,9 +637,11 @@ const Tweet = ({ tweet, onReplyClick, isDetailView = false }) => {
                             style={{ backgroundColor: '#000' }}
                             onError={(e) => {
                               console.error('Video loading error:', e);
+                              console.error('Video URL that failed:', mediaUrl);
                               e.target.style.display = 'none';
                             }}
                             onLoadStart={(e) => {
+                              console.log('Video loading started:', mediaUrl);
                               e.target.pause();
                             }}
                             onPlay={(e) => {
@@ -611,7 +661,11 @@ const Tweet = ({ tweet, onReplyClick, isDetailView = false }) => {
                             loading="lazy"
                             onError={(e) => {
                               console.error('Image loading error:', e);
+                              console.error('Image URL that failed:', mediaUrl);
                               e.target.style.display = 'none';
+                            }}
+                            onLoad={(e) => {
+                              console.log('Image loaded successfully:', mediaUrl);
                             }}
                           />
                         )}

@@ -11,11 +11,17 @@ exports.createPost = async (req, res, next) => {
     
     // Handle media files if they exist
     if (req.files && req.files.length > 0) {
-      req.body.media = req.files.map(file => ({
-        url: `/uploads/${file.filename}`,
-        type: file.mimetype.startsWith('video/') ? 'video' : 'image',
-        filename: file.filename
-      }));
+      console.log('Files uploaded:', req.files);
+      req.body.media = req.files.map(file => {
+        const mediaItem = {
+          url: `/uploads/${file.filename}`,
+          type: file.mimetype.startsWith('video/') ? 'video' : 'image',
+          filename: file.filename
+        };
+        console.log('Created media item:', mediaItem);
+        return mediaItem;
+      });
+      console.log('Final media array:', req.body.media);
     }
 
     // Handle poll data if it exists
@@ -98,6 +104,13 @@ exports.getPosts = async (req, res, next) => {
         };
       }
       return post;
+    });
+
+    // Debug logging for media
+    postsWithPollData.forEach((post, index) => {
+      if (post.media && post.media.length > 0) {
+        console.log(`Post ${index} has media:`, post.media);
+      }
     });
 
     res.status(200).json({
