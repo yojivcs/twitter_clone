@@ -84,25 +84,82 @@ A full-featured Twitter (X) clone built with the MERN stack (MongoDB, Express, R
 
 ## 📱 Screenshots
 
-- [Login Page](screenshots/login.png) - User authentication interface
-- [Main Home Dashboard](screenshots/home-dashboard.png) - Primary timeline view (Main showcase image)
-- [User Profile](screenshots/user-profile.png) - Individual user profiles
-- [Explore Page](screenshots/explore.png) - Trending topics and discover content
-- [Direct Messages](screenshots/messages.png) - Chat conversations
-- [Post Creation](screenshots/post-creation.png) - Tweet composition
-- [Search Results](screenshots/search.png) - User and post search functionality
-- [Profile Editing](screenshots/profile-edit.png) - Profile customization
-- [Purple Theme](screenshots/purple-theme.png) - Custom purple theme
-- [Light Theme](screenshots/light-theme.png) - Custom light theme
-- [Green Theme](screenshots/green-theme.png) - Custom green theme
-- [Orange Theme](screenshots/orange-theme.png) - Custom orange theme
-- [Pink Theme](screenshots/pink-theme.png) - Custom pink theme
-- [Image Upload](screenshots/media-upload.png) - Image Attachment (*)
-- [Video Upload](screenshots/media-upload-video.png) - Video Attachment
-- [Followers](screenshots/followers.png) - Social connections
-- [Following](screenshots/following.png) - Social connections
-- [Tablet View](screenshots/tablet-view.png) - Medium screen adaptation
-- [Mobile View](screenshots/mobile-view.png) - Mobile-optimized interface
+
+#### Login Page
+![Login Page](screenshots/login.png)
+*User authentication interface*
+
+#### Main Home Dashboard
+![Main Home Dashboard](screenshots/home-dashboard.png)
+*Primary timeline view (Main showcase image)*
+
+#### User Profile
+![User Profile](screenshots/user-profile.png)
+*Individual user profiles*
+
+#### Dark Theme
+![Dark Theme](screenshots/dark-theme.png)
+*Dark mode interface*
+
+
+#### Explore Page
+![Explore Page](screenshots/explore.png)
+*Trending topics and discover content*
+
+#### Direct Messages
+![Direct Messages](screenshots/messages.png)
+*Chat conversations*
+
+#### Post Creation
+![Post Creation](screenshots/post-creation.png)
+*Tweet composition*
+
+#### Light Theme
+![Light Theme](screenshots/light-theme.png)
+*Default light appearance*
+
+
+#### Search Results
+![Search Results](screenshots/search.png)
+*User and post search functionality*
+
+#### Profile Editing
+![Profile Editing](screenshots/profile-edit.png)
+*Profile customization*
+
+#### Media Upload
+![Media Upload](screenshots/media-upload.png)
+*Image/video attachment*
+
+#### Followers/Following
+![Followers/Following](screenshots/followers.png)
+*Social connections*
+
+
+#### Purple Theme
+![Purple Theme](screenshots/purple-theme.png)
+*Custom purple theme*
+
+#### Green Theme
+![Green Theme](screenshots/green-theme.png)
+*Custom green theme*
+
+#### Orange Theme
+![Orange Theme](screenshots/orange-theme.png)
+*Custom orange theme*
+
+#### Pink Theme
+![Pink Theme](screenshots/pink-theme.png)
+*Custom pink theme*
+
+#### Tablet View
+![Tablet View](screenshots/tablet-view.png)
+*Medium screen adaptation*
+
+#### Mobile View
+![Mobile View](screenshots/mobile-view.png)
+*Mobile-optimized interface*
+
 
 ## 🚀 Getting Started
 
