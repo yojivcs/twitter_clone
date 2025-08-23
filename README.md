@@ -2,7 +2,17 @@
 
 A full-featured Twitter (X) clone built with the MERN stack (MongoDB, Express, React, Node.js) featuring real-time messaging, media uploads, and a responsive design.
 
+---
+
+## 🖼️ **Live Preview**
+
+**Below is a screenshot of the application in action:**
+
 ![Twitter Clone Screenshot](screenshots/home-dashboard.png)
+
+> **🎯 Main Showcase Image** - This is the primary screenshot that will be displayed prominently on GitHub
+
+**💡 Note:** Once you add the actual screenshot file to the `screenshots/` folder, GitHub will automatically display it here, making your repository look professional and engaging!
 
 ## ✨ Features
 
