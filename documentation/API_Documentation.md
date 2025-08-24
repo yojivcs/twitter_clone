@@ -1,4 +1,4 @@
-# Twitter Clone API Documentation
+# Nighter-Twitter Clone API Documentation
 
 ## Table of Contents
 - [Overview](#overview)
