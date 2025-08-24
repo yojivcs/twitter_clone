@@ -19,7 +19,7 @@
 
 ## Overview
 
-The Twitter Clone API is a RESTful API built with Node.js, Express, and MongoDB. It provides endpoints for user authentication, social media functionality, real-time messaging, and content management. The API supports JWT authentication, file uploads, and real-time communication via WebSocket.
+The Nighter-Twitter Clone API is a RESTful API built with Node.js, Express, and MongoDB. It provides endpoints for user authentication, social media functionality, real-time messaging, and content management. The API supports JWT authentication, file uploads, and real-time communication via WebSocket.
 
 ## Base URL
 
@@ -1050,4 +1050,4 @@ const getTrending = async () => {
 };
 ```
 
-This comprehensive API documentation covers all endpoints, data models, authentication, and usage examples for the Twitter Clone API. The API provides a robust foundation for building social media applications with real-time features, file uploads, and comprehensive search functionality.
+This comprehensive API documentation covers all endpoints, data models, authentication, and usage examples for the Nighter-Twitter Clone API. The API provides a robust foundation for building social media applications with real-time features, file uploads, and comprehensive search functionality.
